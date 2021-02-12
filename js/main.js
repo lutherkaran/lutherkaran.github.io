@@ -474,7 +474,7 @@ $(function () {
     $("#form").submit(function () {
         $.ajax({
             type: "POST",
-            url: "karanluther95@gmail.com",
+            url: "mail.php",
             data: $(this).serialize()
         }).done(function () {
 
