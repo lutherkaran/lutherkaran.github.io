@@ -1,3 +1,23 @@
+<?php 
+session_start();
+if(isset($_POST['submit'])){
+    $to = "karanluther95@gmail.com"; // this is your Email address
+    $from = $_POST['email']; // this is the sender's Email address
+    $name = $_POST['name'];
+    $subject = "Game-Dev";
+    $subject2 = "Thank you for Your submission Game-dev Contact";
+    $message = $name . " " . "\n\n" . $_POST['message'];
+    $message2 = "Here is a copy of your message " . $name . "\n\n" . $_POST['message'];
+
+    $headers = "From:" . $from;
+    $headers2 = "From:" . $to;
+    mail($to,$subject,$message,$headers);
+    mail($from,$subject2,$message2,$headers2); // sends a copy of the message to the sender
+    echo "<script>alert('Mail Sent. Thank you " . $name . ", Connect with Game-dev.');</script>";
+	
+    }
+?>
+
 <!doctype html>
 <html lang="zxx">
 
@@ -316,7 +336,7 @@ background:rgba(20, 20, 30, 1);
                    
                 </div>
 			<div id="GRAPPLU" style="display:none" class="modally-init" modally-max-width="800">
-			
+			<button  class="modally-close modally-close-button" onclick="pauseVid()">×</button>
 					<div class="row">
 						<div class="col-md-6">
 							<h1 class="modal-title"style= "color:#fff;font-size: 30px;">GRAPPLU: The Beginnning<p style="color:#fff">(2020)</p></h1>
@@ -340,7 +360,7 @@ background:rgba(20, 20, 30, 1);
 						        <a href="https://itch.io/embed-upload/3247621?color=161212" class="button smooth-scroll">Play<i class="fas fa-chevron-right"></i></a>
 						    </div>
 						  
-							<video  controls >
+							<video  controls id="myVideo">
 							<source src="videos/Grapplu.mp4" type="video/mp4">
 							<source src="movie.ogg" type="video/ogg">
 							  Your browser does not support the video tag.
@@ -352,7 +372,7 @@ background:rgba(20, 20, 30, 1);
                 </div>
 				
 				<div id="UN-REPAIRABLE TOWER" style="display:none" class="modally-init" modally-max-width="800">
-			
+			<button  class="modally-close modally-close-button" onclick="pauseVid()">×</button>
 					<div class="row">
 						<div class="col-md-6">
 							<h1 class="modal-title"style= "color:#fff;font-size: 30px;">UN-REPAIRABLE TOWER <p style="color:#fff">(2020)</p></h1>
@@ -370,7 +390,7 @@ background:rgba(20, 20, 30, 1);
 						        <!--<a href="https://saigo.itch.io/the-unrepairable-tower" target="_blank"><img src="./img/gplay.png"/></a>-->
 						        <a href="https://saigo.itch.io/the-unrepairable-tower" class="button smooth-scroll">Play<i class="fas fa-chevron-right"></i></a>
 						    </div>
-							<video  controls >
+							<video  controls id="myVideo">
 							<source src="videos/4.mp4" type="video/mp4">
 							<source src="movie.ogg" type="video/ogg">
 							  Your browser does not support the video tag.
@@ -382,7 +402,7 @@ background:rgba(20, 20, 30, 1);
                 </div>
 				
 				<div id="AIR RAID" style="display:none" class="modally-init" modally-max-width="800">
-			
+			<button  class="modally-close modally-close-button" onclick="pauseVid()">×</button>
 					<div class="row">
 						<div class="col-md-6">
 							<h1 class="modal-title"style= "color:#fff;font-size: 30px;">AIRAID <p style="color:#fff">(2019)</p></h1>
@@ -403,7 +423,7 @@ background:rgba(20, 20, 30, 1);
 						        <!--<a href="https://github.com/mattstg/AirRaid" target="_blank"><img src="./img/gplay.png"/></a>-->
 						        <a href="https://github.com/mattstg/AirRaid" class="button smooth-scroll">Github<i class="fas fa-chevron-right"></i></a>
 						    </div>
-							<video  controls >
+							<video  controls id="myVideo">
 							<source src="videos/airraid.mp4" type="video/mp4">
 							<source src="movie.ogg" type="video/ogg">
 							  Your browser does not support the video tag.
@@ -415,7 +435,7 @@ background:rgba(20, 20, 30, 1);
                 </div>
 				
 				<div id="SPINELESS" style="display:none" class="modally-init" modally-max-width="800">
-			
+			<button  class="modally-close modally-close-button" onclick="pauseVid()">×</button>
 					<div class="row">
 						<div class="col-md-6">
 							<h1 class="modal-title"style= "color:#fff;font-size: 30px;"> SPINELESS <p style="color:#fff">A Blank Tale (2020)</p></h1>
@@ -437,7 +457,7 @@ background:rgba(20, 20, 30, 1);
 						       <!-- <a href="#" target="_blank"><img src="./img/gplay.png"/></a>-->
 						        <a href="https://github.com/mattstg/VRISIEN" class="button smooth-scroll">Github<i class="fas fa-chevron-right"></i></a>
 						    </div>
-							<video  controls >
+							<video  controls id="myVideo">
 							<source src="videos/2.mp4" type="video/mp4">
 							<source src="movie.ogg" type="video/ogg">
 							  Your browser does not support the video tag.
@@ -449,7 +469,7 @@ background:rgba(20, 20, 30, 1);
                 </div>
 				
 				<div id="ASTROIDS" style="display:none" class="modally-init" modally-max-width="800">
-			
+			<button  class="modally-close modally-close-button" onclick="pauseVid()">×</button>
 					<div class="row">
 						<div class="col-md-6">
 							<h1 class="modal-title"style= "color:#fff;font-size: 30px;">ASTROIDS<p style="color:#fff">(2019)</p></h1>
@@ -469,7 +489,7 @@ background:rgba(20, 20, 30, 1);
 						        <a href="https://itch.io/embed-upload/3247734?color=484040" class="button smooth-scroll">Play<i class="fas fa-chevron-right"></i></a>
 						    </div>
 						    
-							<video  controls >
+							<video  controls id="myVideo">
 							<source src="videos/1.mp4" type="video/mp4">
 							<source src="movie.ogg" type="video/ogg">
 							  Your browser does not support the video tag.
@@ -481,7 +501,7 @@ background:rgba(20, 20, 30, 1);
                 </div>
 				
 				<div id="The Verge" style="display:none" class="modally-init" modally-max-width="800">
-			
+			<button  class="modally-close modally-close-button" onclick="pauseVid()">×</button>
 					<div class="row">
 						<div class="col-md-6">
 							<h1 class="modal-title"style= "color:#fff;font-size: 30px;">The Verge<p style="color:#fff">(2020)</p></h1>
@@ -500,7 +520,7 @@ background:rgba(20, 20, 30, 1);
 						    <div class="playstore">
 						        <a href="#" target="_blank"><img src="./img/gplay.png"/></a>
 						    </div>
-							<video  controls >
+							<video  controls id="myVideo">
 							<source src="videos/3.mp4" type="video/mp4">
 							<source src="movie.ogg" type="video/ogg">
 							  Your browser does not support the video tag.
@@ -695,6 +715,16 @@ I'm currently employed as a FQA Tester in Globalstep, but I'm always open for ne
         <script async defer src="https://buttons.github.io/buttons.js"></script>
 	
 	<!-- //modally popup -->
+	    
+	    <script> 
+var vid = document.getElementById("myVideo"); 
+ 
+
+function pauseVid() { 
+  vid.pause(); 
+} 
+
+</script>
 
 </body>
 </html>
