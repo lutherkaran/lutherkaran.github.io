@@ -472,6 +472,7 @@ $(function () {
 
     // Contact form
     $("#form").submit(function () {
+        debugger;
         $.ajax({
             type: "POST",
             url: "mail.php",
