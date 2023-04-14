@@ -243,6 +243,7 @@ $(function () {
     // Portfolio without filter
     $('.grid').isotope({
         // options
+        resizable: true,
         itemSelector: '.grid-item',
     });
 
