@@ -4,3 +4,6 @@ body, .page-wrapper, .frame{overflow-y: scroll;}
 @media(min-width: 1200px){
 	#brands{margin-top: -15%;}
 }
+@media(min-width: 760px) and (max-width:  1199px){
+	#brands{margin-top: -85%;}
+}
