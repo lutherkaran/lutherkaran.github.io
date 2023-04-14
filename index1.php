@@ -184,25 +184,6 @@ background:rgba(20, 20, 30, 1);
                             <!-- Card end -->
                         </div>
                         <!-- Case end -->
-                    <div id="anchor-1" class="grid grid-3">
-                        <!-- Case -->
-                        <div class="grid-item digital-art photography objects mb-30">
-                            <!-- Card -->
-                            <div class="project-card tilt md" data-tilt>
-                                <!-- Case cover -->
-                                <img src="img/portfolio/sm/1.jpg" alt="project">
-                                <!-- Case description -->
-                                <div class="project-title">
-                                    <!-- Title -->
-                                    <h3 class="title bold">MOVOLIT</h3>
-                                    <!-- More button -->
-                                    <a href="#MOVOLIT" target="_modal" class="more"><i class="fas fa-chevron-right"></i></a>
-                                </div>
-                                <!-- Case description end -->
-                            </div>
-                            <!-- Card end -->
-                        </div>
-                        <!-- Case end -->
                         <!-- Case -->
                         <div class="grid-item digital-art advertising mb-30">
                             <!-- Card -->
@@ -328,32 +309,6 @@ background:rgba(20, 20, 30, 1);
             <!-- Portfolio end -->
             <!--popup-->
 			
-            <div id="MOVOLIT" style="display:none" class="modally-init" modally-max-width="800">
-			
-					<div class="row">
-						<div class="col-md-6">
-							<h1 class="modal-title"style= "color:#fff;font-size: 30px;">MOVOLIT <p style="color:#fff">year(2020)</p></h1>
-							<h5 style="color:#fff">Technology used C#/Unity</h5>
-							
-							<p style= "color:#fff;">Top-Down Architecture is used for an easy game flow.
-								A Strategy based multi-Level 2D puzzle Game.
-								Consist of a dark and Challenging Environment.
-								Player needs a torch to move around.
-								2D Dynamic Lights and Shaders have been used in real time environment.
-							</p>
-						</div>
-						<div class="col-md-6">
-						    
-						    <div class="playstore">
-						        <a href="https://itch.io/embed-upload/3247209?color=000000" target="_blank"><img src="./img/gplay.png"/></a>
-						    </div>
-							<img style="width:100%; margin-top:20px;" src="./img/Movolit.gif"/>
-						</div>
-					</div>
-			
-                   
-            </div>
-
 			<div id="MOVOLIT" style="display:none" class="modally-init" modally-max-width="800">
 			
 					<div class="row">
@@ -378,8 +333,7 @@ background:rgba(20, 20, 30, 1);
 					</div>
 			
                    
-            </div>
-
+                </div>
 			<div id="GRAPPLU" style="display:none" class="modally-init" modally-max-width="800">
 			<button  class="modally-close modally-close-button" onclick="pauseVid()">×</button>
 					<div class="row">
