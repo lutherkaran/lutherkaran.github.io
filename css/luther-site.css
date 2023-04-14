@@ -1,3 +1,6 @@
 body{scroll-behavior: smooth;transition: .4s all ease;-webkit-transition: .4s all ease;}
 /*.h-auto{height: -webkit-fill-available !important;}*/
-.page-wrapper{overflow-y: scroll;}
+body, .page-wrapper, .frame{overflow-y: scroll;}
+@media(min-width: 1200px){
+	#brands{margin-top: -15%;}
+}
