@@ -1,2 +1,3 @@
 body{scroll-behavior: smooth;transition: .4s all ease;-webkit-transition: .4s all ease;}
 /*.h-auto{height: -webkit-fill-available !important;}*/
+.page-wrapper{overflow-y: scroll;}
